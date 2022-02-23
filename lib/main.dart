@@ -174,7 +174,9 @@ class _MyAppState extends State<MyApp> {
               locationData('gyroscope z: ' + gyroscope![2]),
               MaterialButton(
                 onPressed: () async {
-                  await methodChannel.invokeMethod("start");
+                  List<dynamic> data =
+                      await methodChannel.invokeMethod("start");
+                  print(data);
                 },
                 child: Text('Start Recording'),
               ),
