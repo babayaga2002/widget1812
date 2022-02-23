@@ -120,11 +120,11 @@ class _MyAppState extends State<MyApp> {
         },
       ),
     );
-    accelerometer =
-        _accelerometerValues!.map((double v) => v.toStringAsFixed(1)).toList();
-    print(accelerometer);
-    gyroscope =
-        _gyroscopeValues!.map((double v) => v.toStringAsFixed(1)).toList();
+    // accelerometer =
+    //     _accelerometerValues!.map((double v) => v.toStringAsFixed(1)).toList();
+    // print(accelerometer);
+    // gyroscope =
+    //     _gyroscopeValues!.map((double v) => v.toStringAsFixed(1)).toList();
     BackgroundLocation.getLocationUpdates((location) {
       flag = true;
       setState(() {
@@ -177,7 +177,6 @@ class _MyAppState extends State<MyApp> {
                   await methodChannel.invokeMethod("start");
                 },
                 child: Text('Start Recording'),
-              ),
               ),
             ],
           ),
