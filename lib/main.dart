@@ -178,13 +178,6 @@ class _MyAppState extends State<MyApp> {
                 },
                 child: Text('Start Recording'),
               ),
-              MaterialButton(
-                onPressed: () async {
-                  List<dynamic> data =
-                      await methodChannel.invokeMethod("start");
-                  print(data);
-                },
-                child: Text('Start Recording'),
               ),
             ],
           ),
